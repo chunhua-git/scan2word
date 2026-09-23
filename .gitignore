@@ -1,0 +1,30 @@
+# 真实当事人材料（扫描件与转换产物），绝对不能进仓库
+samples/
+out/
+selftest_out/
+probe_vector.pdf
+selftest_result.txt
+
+# 内部文档
+发布到GitHub.md
+
+# 体积大 / 可重新生成，用 Releases 分发
+vendor/
+dist/
+build/
+build_onefile/
+_发布用源码/
+
+# 临时目录
+.tmp/
+tmp/
+tmpdir/
+.venv/
+__pycache__/
+*.py[cod]
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
