@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 <chunhua.git>
+Copyright (c) 2026 chunhua-git
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,20 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---------------------------------------------------------------------------------
-本许可证只覆盖本项目自己的代码。
-
-随附的第三方组件各有其许可证（均非 AGPL，均可再分发），清单见
-「许可证清单.txt」，其中需要留意的是：
-
-  PySide6 / Qt  —— LGPL-3.0（动态链接使用；目录版把 Qt 的 DLL 作为独立
-                   文件分发，接收者可自行替换，满足 LGPL 的要求）
-  RapidOCR / PP-OCRv4 模型  —— Apache-2.0
-  pypdfium2      —— Apache-2.0 / BSD-3-Clause
-  pdfplumber / pdfminer.six —— MIT
-  reportlab      —— BSD-3-Clause
-  python-docx    —— MIT
-  onnxruntime    —— MIT
-  OpenCV         —— Apache-2.0
-  NumPy          —— BSD-3-Clause
