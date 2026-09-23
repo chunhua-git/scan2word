@@ -16,7 +16,7 @@
 
 两个附件功能完全相同，任选其一。系统要求：Windows 10 / 11 64 位，纯 CPU，内存 4GB 以上。
 
-下载地址：<https://github.com/chunhua-git/scan2wordv0.1/releases/latest>
+下载地址：<https://github.com/chunhua-git/scan2word/releases/latest>
 
 ## 适用范围
 
@@ -119,7 +119,7 @@ packaging/
 
 ### 直接运行打包版
 
-从 [Releases](https://github.com/chunhua-git/scan2wordv0.1/releases/latest) 下载 zip，
+从 [Releases](https://github.com/chunhua-git/scan2word/releases/latest) 下载 zip，
 解压后双击 `scan2word.exe`。也可以把整个文件夹拷给别人，对方不需要装任何环境。
 
 ### 从源码运行
