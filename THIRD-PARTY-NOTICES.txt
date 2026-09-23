@@ -1,0 +1,72 @@
+THIRD-PARTY NOTICES
+===================
+
+scan2word 本身以 MIT 许可证发布（见 LICENSE）。它打包/依赖的第三方组件
+版权归各自作者所有，许可证如下。
+
+**本项目不含任何 AGPL 组件**，可自由使用、修改、闭源分发。
+
+
+组件清单
+--------
+
+  RapidOCR（含 PP-OCRv4 模型）      Apache-2.0
+  onnxruntime                      MIT
+  pypdfium2（PDF 渲染）             Apache-2.0 / BSD-3-Clause
+  pdfplumber                       MIT
+  pdfminer.six                     MIT
+  reportlab（写双层可搜索 PDF）      BSD-3-Clause
+  python-docx（Word 输出）          MIT
+  PySide6 / Qt（图形界面）           LGPL-3.0
+  OpenCV                           Apache-2.0
+  NumPy                            BSD-3-Clause
+  lxml                             BSD-3-Clause
+  Pillow                           MIT-CMU
+  Shapely                          BSD-3-Clause
+  pyclipper                        MIT
+  PyYAML                           MIT
+
+
+需要留意的两点
+--------------
+
+1. PySide6 / Qt —— LGPL-3.0
+
+   本项目的图形界面使用 PySide6（Qt 的 Python 绑定），采用**动态链接**方式使用。
+   LGPL-3.0 要求使用者能够替换该库，为此：
+
+     * 分发的是「目录版」时，Qt 的 DLL / .pyd 作为**独立文件**位于
+       `_internal/PySide6/` 下，接收者可直接替换为自己编译或修改的版本；
+     * 分发的是「单文件版」时，所有内容被打进一个 exe，接收者无法单独替换 Qt。
+       若你需要严格满足 LGPL 的可替换要求，请分发目录版或自行提供替换途径。
+
+   Qt 源码获取：https://www.qt.io/download-open-source
+   LGPL-3.0 全文：https://www.gnu.org/licenses/lgpl-3.0.html
+
+2. 识别模型
+
+   RapidOCR 自带的 PP-OCRv4 检测/识别/方向分类模型为 Apache-2.0，
+   随程序一起分发，不额外下载、不联网。
+
+
+关于曾经使用的 PyMuPDF
+-----------------------
+
+本项目早期版本用 PyMuPDF 做 PDF 访问。它是 **AGPL-3.0**：把打包产物分发给
+他人即构成分发副本，需连带以 AGPL 提供全部源码，与本项目「可自由改、可闭源
+分发」的定位冲突。
+
+现已整体替换为上述宽松许可组件：
+
+  渲染 → pypdfium2   文字层与线条 → pdfplumber / pdfminer.six
+  写双层 PDF → reportlab
+
+替换前后做过一致性复核（`tools/compare_pdf_backends.py`）：中文文字层逐字一致、
+矢量表格网格完全相同。
+
+
+离线说明
+--------
+
+本程序全程本地运行，不含任何上传、遥测、广告或捆绑安装代码。
+识别模型随程序附带，断网可正常使用。
